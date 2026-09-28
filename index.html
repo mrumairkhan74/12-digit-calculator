@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>12-Digit Desktop Calculator Online — Free & Fast</title>
+    <meta
+      name="description"
+      content="Free online 12-digit desktop calculator with percentage, tax, markup, memory, calculation history, Grand Total and keyboard support. Works on mobile."
+    />
+    <link rel="canonical" href="https://example.com/" />
+    <meta name="theme-color" content="#eef1f4" />
+    <meta property="og:title" content="12-Digit Desktop Calculator Online" />
+    <meta
+      property="og:description"
+      content="A fast, free online desktop calculator with 12-digit display, memory, tax, markup, history and keyboard support."
+    />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "12-Digit Desktop Calculator",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main class="site">
+      <header class="hero">
+        <p class="eyebrow">FREE ONLINE TOOL</p>
+        <h1>12-Digit Desktop Calculator</h1>
+        <p class="subtitle">
+          A professional office-style calculator for everyday arithmetic,
+          percentage, tax, markup and memory calculations.
+        </p>
+      </header>
+
+      <section class="calculator-wrap" aria-label="Online 12-digit calculator">
+        <div class="calculator">
+          <div class="top-strip">
+            <span class="brand">DESKTOP CALC</span>
+            <span class="power" aria-label="Dual power">☀ SOLAR + BATTERY</span>
+          </div>
+
+          <div class="solar" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span
+            ><span></span>
+          </div>
+
+          <div class="display-area">
+            <div class="status" aria-hidden="true">
+              <span id="memory-indicator">M</span>
+              <span id="gt-indicator">GT</span>
+              <span id="mode-indicator"></span>
+            </div>
+            <output
+              id="display"
+              class="display"
+              aria-live="polite"
+              aria-label="Calculator display"
+              >0</output
+            >
+            <button
+              type="button"
+              id="copyBtn"
+              class="copy-btn"
+              aria-label="Copy result to clipboard"
+            >
+              COPY
+            </button>
+          </div>
+
+          <div class="settings">
+            <div class="settings-row">
+              <label for="brightness">Display</label>
+              <input
+                id="brightness"
+                type="range"
+                min="55"
+                max="100"
+                value="88"
+                aria-label="Display brightness"
+              />
+              <button
+                type="button"
+                id="themeBtn"
+                class="mini-btn"
+                aria-label="Toggle theme"
+              >
+                Theme
+              </button>
+              <button
+                type="button"
+                id="historyBtn"
+                class="mini-btn"
+                aria-label="Toggle calculation history"
+              >
+                History (0)
+              </button>
+            </div>
+            <div class="settings-row">
+              <label for="taxRate">Tax rate</label>
+              <input
+                id="taxRate"
+                type="number"
+                min="-99"
+                max="999"
+                step="0.01"
+                value="0"
+                inputmode="decimal"
+                aria-label="Tax rate in percent"
+              />
+              <span>%</span>
+            </div>
+          </div>
+
+          <div class="keys" id="keys">
+            <button type="button" data-action="memory-clear" class="memory">
+              MC
+            </button>
+            <button type="button" data-action="memory-recall" class="memory">
+              MR
+            </button>
+            <button type="button" data-action="memory-add" class="memory">
+              M+
+            </button>
+            <button type="button" data-action="memory-subtract" class="memory">
+              M−
+            </button>
+            <button type="button" data-action="grand-total" class="special">
+              GT
+            </button>
+
+            <button type="button" data-action="clear" class="clear">AC</button>
+            <button type="button" data-action="clear-entry" class="clear">
+              CE
+            </button>
+            <button type="button" data-action="backspace" class="function">
+              ⌫
+            </button>
+            <button type="button" data-action="percent" class="operator">
+              %
+            </button>
+            <button type="button" data-action="sign" class="function">±</button>
+
+            <button type="button" data-digit="7">7</button>
+            <button type="button" data-digit="8">8</button>
+            <button type="button" data-digit="9">9</button>
+            <button type="button" data-action="divide" class="operator">
+              ÷
+            </button>
+            <button type="button" data-action="tax-subtract" class="special">
+              TAX−
+            </button>
+
+            <button type="button" data-digit="4">4</button>
+            <button type="button" data-digit="5">5</button>
+            <button type="button" data-digit="6">6</button>
+            <button type="button" data-action="multiply" class="operator">
+              ×
+            </button>
+            <button type="button" data-action="tax-add" class="special">
+              TAX+
+            </button>
+
+            <button type="button" data-digit="1">1</button>
+            <button type="button" data-digit="2">2</button>
+            <button type="button" data-digit="3">3</button>
+            <button type="button" data-action="subtract" class="operator">
+              −
+            </button>
+            <button type="button" data-action="markup" class="special">
+              MU
+            </button>
+
+            <button type="button" data-digit="00">00</button>
+            <button type="button" data-digit="0">0</button>
+            <button type="button" data-digit="000">000</button>
+            <button type="button" data-action="decimal" class="function">
+              .
+            </button>
+            <button type="button" data-action="add" class="operator">+</button>
+
+            <button type="button" data-action="equals" class="equals">=</button>
+          </div>
+
+          <div class="calculator-footer">
+            <span>12 DIGIT</span>
+            <span>OFFICE / BUSINESS</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="history"
+        id="historyPanel"
+        aria-label="Calculation history"
+      >
+        <div class="history-head">
+          <span>History</span>
+          <button type="button" id="historyClear" aria-label="Clear history">
+            Clear
+          </button>
+        </div>
+        <ul id="historyList"></ul>
+      </section>
+
+      <section class="content">
+        <h2>Free 12-Digit Calculator Online</h2>
+        <p>
+          This online desktop calculator is designed for everyday office, school
+          and business calculations. It supports a 12-digit display, keyboard
+          input, memory functions, percentage, tax, markup and Grand Total.
+        </p>
+
+        <div class="info-grid">
+          <article>
+            <h3>12-digit display</h3>
+            <p>
+              Enter numbers up to the calculator's 12-digit display limit
+              without installing software.
+            </p>
+          </article>
+          <article>
+            <h3>Business functions</h3>
+            <p>
+              Use TAX+, TAX−, MU, percentage and memory keys for common business
+              calculations.
+            </p>
+          </article>
+          <article>
+            <h3>Keyboard support</h3>
+            <p>
+              Use your keyboard for digits, operators, Enter, Escape, Backspace
+              and decimal input.
+            </p>
+          </article>
+        </div>
+
+        <h2>How to use the calculator</h2>
+        <ol>
+          <li>Enter the first number.</li>
+          <li>Select an operation such as +, −, × or ÷.</li>
+          <li>Enter the second number and press =.</li>
+          <li>Use M+, M−, MR and MC for memory calculations.</li>
+        </ol>
+
+        <h2>Common examples</h2>
+        <div class="examples">
+          <p><strong>25 + 15 =</strong> 40</p>
+          <p><strong>500 ÷ 4 =</strong> 125</p>
+          <p><strong>200 × 10 %</strong> 20</p>
+          <p><strong>100 × 20 MU</strong> 120 (markup)</p>
+          <p>
+            <strong>100 ÷ 20 MU</strong> 125 (selling price from cost &amp;
+            margin)
+          </p>
+        </div>
+
+        <h2>Frequently asked questions</h2>
+        <details>
+          <summary>What is a 12-digit calculator?</summary>
+          <p>
+            A 12-digit calculator can display up to twelve significant numeric
+            digits in its main display.
+          </p>
+        </details>
+        <details>
+          <summary>Can I use my keyboard?</summary>
+          <p>
+            Yes. Number keys and common arithmetic operators are supported,
+            along with Enter, Escape, Backspace and the decimal key.
+          </p>
+        </details>
+        <details>
+          <summary>Does it work on mobile?</summary>
+          <p>
+            Yes. The calculator is responsive and designed for touch screens as
+            well as desktop keyboards.
+          </p>
+        </details>
+        <details>
+          <summary>How does the tax rate work?</summary>
+          <p>
+            Enter a tax rate in the settings field (for example 15). TAX+ adds
+            the rate; TAX− removes it from a tax-included price.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
